@@ -21,5 +21,35 @@
 (function () {
 
     //your code here
+    let feedTemplate = document.querySelector("h1");
+    let sectionLinks = document.querySelectorAll(".title");
+    let strArray = document.querySelectorAll("p");
+    let str = "";
 
+    // part 1
+    feedTemplate.addEventListener("click", function() {
+        if(feedTemplate.style.color == 'black') {
+            feedTemplate.style.color = 'red';
+        }
+        else {
+            feedTemplate.style.color = 'black';
+        }
+    });
+
+    // part 2
+    for (i = 0; i < sectionLinks.length; i += 2) {
+        sectionLinks[i].style.visibility = 'hidden';
+    }
+
+    //part 3
+    //for (i = 0; i < strArray.length; i++) {
+    strArray[0].replace("bacon", "LASER VISION")
+        console.log(strArray[i]);
+   // }
+    
+   //replaceText("p", "bacon", "LASER VISION",)
+    //document.body.innerHTML = document.body.replace('bacon', 'LASER VISION');
+    //var curInnerHTML = document.body.innerHTML;
+    //curInnerHTML = curInnerHTML.replace("bacon", "LASER VISION");
+    //document.body.innerHTML = curInnerHTML;
 })();

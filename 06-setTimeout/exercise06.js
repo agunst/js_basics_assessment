@@ -14,6 +14,9 @@
  */
 
 //your code here
+    setTimeout(function () { 
+        document.querySelector("#title").innerHTML = "Goodbye World.";
+    }, 3000);
 
 })();
     
