@@ -23,9 +23,10 @@
     //your code here
     let feedTemplate = document.querySelector("h1");
     let sectionLinks = document.querySelectorAll(".title");
-    let strArray = document.querySelectorAll("p");
-    let str = "";
-
+    //let strArray = document.querySelectorAll("p");
+    //let str = "";
+    var postList = document.querySelectorAll(".post");
+    var index;
     // part 1
     feedTemplate.addEventListener("click", function() {
         if(feedTemplate.style.color == 'black') {
@@ -41,10 +42,10 @@
         sectionLinks[i].style.visibility = 'hidden';
     }
 
-    //part 3
+    // part 3
     //for (i = 0; i < strArray.length; i++) {
-    strArray[0].replace("bacon", "LASER VISION")
-        console.log(strArray[i]);
+  //  strArray[0].replace("bacon", "LASER VISION")
+    //    console.log(strArray[i]);
    // }
     
    //replaceText("p", "bacon", "LASER VISION",)
@@ -52,4 +53,35 @@
     //var curInnerHTML = document.body.innerHTML;
     //curInnerHTML = curInnerHTML.replace("bacon", "LASER VISION");
     //document.body.innerHTML = curInnerHTML;
+
+    // part 4
+    /*
+    function removeElement(elementId) {
+        // Removes an element from the document
+        var element = document.getElementById(elementId);
+        element.parentNode.removeChild(element);
+    }
+    for (var i = list.length - 1; 0 <= i; i--) {
+        if (list[i] && list[i].parentElement) {
+            list[i].parentElement.removeChild(list[i]);
+        }
+    }
+
+    */
+    //removeBottomUp(2);
+    function removeBottomUp(numRemoved) {
+        index = postList.length - 1;
+
+        for (i=0;i<numRemoved; i++) {
+            console.log(index);
+            postList[index].parentElement.removeChild(postList[index]);
+            index--;
+            console.log(index);
+        }
+        return;
+    }
+    
+    
+   // list[i].parentElement.removeChild(list[list.length-1]);
+
 })();
