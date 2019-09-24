@@ -31,5 +31,16 @@
   }
 
   //your code here
+  let images = ["cats.jpg", "hugger.jpg", "internet.jpg", "jackson.jpg", "washington.jpg"];
+  
+  function randomNum(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
+  function imageTimeout() {
+    addImage(images[randomNum(5)]);
+  }
+
+  imageTimeout();
+  setInterval(imageTimeout, 2500);
 })();
