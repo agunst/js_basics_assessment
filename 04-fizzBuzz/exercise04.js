@@ -28,6 +28,7 @@
 
     function fizzBuzz(maxValue) {
         var str = "";
+        var i;
 
         for(i=1; i<=maxValue; i++) {
             if (!(i%2) && !(i%3)) {

@@ -27,18 +27,18 @@
     var str = [];
     let postList = document.querySelectorAll(".post");
     let ads = document.querySelector(".hide-for-small");
-    var index;
+    var i;
     /* part 1:
         Any time someone clicks on the title at the top "feed template,"
         make the color of the "feed template" text change from black to red
         and then from red to black when clicked again.
     */
     feedTemplate.addEventListener("click", function() {
-        if(feedTemplate.style.color == 'black') {
-            feedTemplate.style.color = 'red';
+        if(feedTemplate.style.color == 'red') {
+            feedTemplate.style.color = 'black';
         }
         else {
-            feedTemplate.style.color = 'black';
+            feedTemplate.style.color = 'red';
         }
     });
 
@@ -65,24 +65,45 @@
     /* part 4
         Delete the last two posts in the middle section (they have a CSS class "post")
     */
-    removeBottomUp(2);
-    function removeBottomUp(numRemoved) {
-        index = postList.length - 1;
+    //removeBottomUp(2);
+    
+    //function removeBottomUp(numRemoved) {
+    /*    index = postList.length - 1;
 
-        for (i=0;i<numRemoved; i++) {
+        for (i=0; i<numRemoved; i++) {
+            console.log(index);
+            if (postList[index] && postList[index].parentElement) {
+                postList[index].parentElement.removeChild(postList[index]);
+            }
+            index--;
+            console.log(index);
+    
+        }
+        
+        for (i=(postList.length-1); i>(postList.length-1-numRemoved); i--) {
+            console.log(i);
+            console.log(postList[i]);
+            console.log(postList[i].parentElement);
             if (postList[i] && postList[i].parentElement) {
                 postList[i].parentElement.removeChild(postList[i]);
             }
-            index--;
+            console.log(i);
+
         }
+        
         return;
     }
+    */
+    postList[6].remove();
+    postList[4].remove();
 
-    /* part 5
+    /* part 5:
         Remove the images in the right column
     */
     ads.remove();
     
-
+    /* BONUS:
+        add a special surprise inside!
+    */
 
 })();

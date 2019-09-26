@@ -10,6 +10,7 @@
 (function() {
 
     //your code here
+    var i;
     var newArray =[];
 
     for(i=1; i<=artArray.length; i++) {
