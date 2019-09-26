@@ -65,35 +65,6 @@
     /* part 4
         Delete the last two posts in the middle section (they have a CSS class "post")
     */
-    //removeBottomUp(2);
-    
-    //function removeBottomUp(numRemoved) {
-    /*    index = postList.length - 1;
-
-        for (i=0; i<numRemoved; i++) {
-            console.log(index);
-            if (postList[index] && postList[index].parentElement) {
-                postList[index].parentElement.removeChild(postList[index]);
-            }
-            index--;
-            console.log(index);
-    
-        }
-        
-        for (i=(postList.length-1); i>(postList.length-1-numRemoved); i--) {
-            console.log(i);
-            console.log(postList[i]);
-            console.log(postList[i].parentElement);
-            if (postList[i] && postList[i].parentElement) {
-                postList[i].parentElement.removeChild(postList[i]);
-            }
-            console.log(i);
-
-        }
-        
-        return;
-    }
-    */
     postList[6].remove();
     postList[4].remove();
 
