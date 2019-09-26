@@ -24,7 +24,7 @@
     let feedTemplate = document.querySelector("h1");
     let sectionLinks = document.querySelectorAll(".title");
     let strArray = document.querySelectorAll("p");
-    var str = "";
+    var str = [];
     let postList = document.querySelectorAll(".post");
     let ads = document.querySelector(".hide-for-small");
     var index;
@@ -53,17 +53,14 @@
     /* part 3:
         Change every instance of the word "bacon" on the page to be "LASER VISION"
     */
-    console.log(strArray);
-    //for (i = 0; i < strArray.length; i++) {
-  //  strArray[0].replace("bacon", "LASER VISION")
-    //    console.log(strArray[i]);
-   // }
-    
-   //replaceText("p", "bacon", "LASER VISION",)
-    //document.body.innerHTML = document.body.replace('bacon', 'LASER VISION');
-    //var curInnerHTML = document.body.innerHTML;
-    //curInnerHTML = curInnerHTML.replace("bacon", "LASER VISION");
-    //document.body.innerHTML = curInnerHTML;
+    for (i = 0; i < strArray.length; i++) {
+        str = strArray[i].innerHTML.split(" ");
+        for(j=0; j<str.length; j++) {
+            if(str[j].toLowerCase()=="bacon")
+            str[j] = "LASER VISION";
+        }
+        strArray[i].innerHTML = str.join(" ");
+    }
 
     /* part 4
         Delete the last two posts in the middle section (they have a CSS class "post")

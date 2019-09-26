@@ -10,6 +10,14 @@
 (function() {
 
     //your code here
+    var newArray =[];
+
+    for(i=1; i<=artArray.length; i++) {
+        if(!(i%3)) {
+            newArray.push(artArray[i-1]);
+        }
+    }
+    artArray = newArray;
 
     writeAscii(artArray);
 

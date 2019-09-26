@@ -14,8 +14,9 @@
 
   //loop through the linesArray and prepend lol 40x to each line
   //before adding to the new line yeahArray
+  
   for(let i=0; i < linesArray.length; i++){
-    //yeahArray.push(linesArray[i], 'lol'.repeat(40));
+    yeahArray.push(linesArray[i], 'lol'.repeat(40));
     yeahArray.push(linesArray[i]);
   }
 
